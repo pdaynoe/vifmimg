@@ -1,7 +1,7 @@
 install:
 	sudo cp ./vifmrun /usr/bin/vifmrun
 	sudo chmod +x /usr/bin/vifmrun
-	@if [[ ! -d ~/.config/vifm/scripts/ ]]; then\
+	@if [ ! -d ~/.config/vifm/scripts/ ]; then\
 		mkdir --parents ~/.config/vifm/scripts ;\
 	fi
 	cp ./vifmimg ~/.config/vifm/scripts/vifmimg

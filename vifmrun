@@ -21,9 +21,9 @@ else
 	vifmimg clear
 fi
 
-# go to pwd 
-if [ -z "$1" ]; then
-    vifm "$PWD" "$HOME"  > /dev/null 2>&1
-else
-    vifm "$1" "$HOME" > /dev/null 2>&1
-fi
+# # go to pwd 
+# if [ -z "$1" ]; then
+#     vifm "$PWD" "$HOME"  > /dev/null 2>&1
+# else
+#     vifm "$1" "$HOME" > /dev/null 2>&1
+# fi
