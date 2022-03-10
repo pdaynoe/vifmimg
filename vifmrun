@@ -21,8 +21,8 @@ else
 	vifmimg clear
 fi
 
-# go to cwd if vifm is closed
-if [ -z "$1"  ]; then
+# go to pwd 
+if [ -z "$1" ]; then
     vifm "$PWD" "$HOME"  > /dev/null 2>&1
 else
     vifm "$1" "$HOME" > /dev/null 2>&1
