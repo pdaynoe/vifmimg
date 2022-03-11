@@ -18,6 +18,13 @@ main() {
         "clear")
 			pclear "$@"
 			;;
+        # "svg")
+			# FILE="$PWD/$6"
+        #     CFILE=$CACHEDIR/$(printf '%s' "$FILE" | sed -e 's/svg/png/g' )
+        #     convert "$FILE" "$CFILE"
+        #     set -- 6="$CFILE"
+			# image "$1" "$2" "$3" "$4" "$5" "$CFILE"
+			# ;;
         "draw")
 			FILE="$PWD/$6"
 			image "$1" "$2" "$3" "$4" "$5" "$FILE"
