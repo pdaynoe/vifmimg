@@ -1,5 +1,14 @@
 #!/bin/sh
 
+runvifm()
+{
+    if [ -z "$1"  ]; then
+        vifm "$PWD" "$HOME" 
+    else
+        vifm "$1" "$HOME" 
+    fi
+}
+
 if [ -z "$(command -v vifm)" ]; then
 	printf "vifm isn't installed on your system!\n"
 	exit 1
@@ -17,8 +26,8 @@ else
 	ueberzug layer -s <"$FIFO_UEBERZUG" -p json &
 	exec 3>"$FIFO_UEBERZUG"
 	trap cleanup EXIT
-	vifm "$@" 3>&-
+	runvifm "$@" 3>&-
+	# vifm "$@" 3>&-
 	vifmimg clear
 fi
 
-[ -z "$1"  ] && vifm "$PWD" "$HOME"  > /dev/null 2>&1 || vifm "$1" "$HOME" > /dev/null 2>&1
