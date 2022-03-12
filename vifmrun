@@ -26,7 +26,8 @@ else
 	ueberzug layer -s <"$FIFO_UEBERZUG" -p json &
 	exec 3>"$FIFO_UEBERZUG"
 	trap cleanup EXIT
-	runvifm "$@" 3>&-
+	runvifm "$@" 
+	# runvifm "$@" 3>&-
 	# vifm "$@" 3>&-
 	vifmimg clear
 fi
